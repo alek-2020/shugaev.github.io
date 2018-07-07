@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
- 
 
 <head>
     <title>Шугаев Алексей</title>
@@ -9,283 +8,64 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            border: none;
-        }
-
-        .bg-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 100vw;
-            /* min-height: 500px;*/
-            /* min-width: 900px;*/
-            z-index: -10;
-            opacity: 1;
-            overflow: hidden;
-            filter: brightness(.5);
-
-            /* margin: -5%; */
-            /* width: 110%; */
-            /* height: 109%; */
-            /* background-image: url(video/Sava_As.jpg); */
-            background-color: #25137d;
-            /* background-size: cover; */
-            /* filter: blur(10px); */
-            /* background-position: center; */
-        }
-
-        .bg-video__content {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            z-index: -10;
-        }
-
-        .main-block {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .logo-text {
-            font-size: 100px;
-            color: #de3030;
-            font-family: sans-serif;
-            font-weight: 800;
-            letter-spacing: 10px;
-            margin-right: -10px;
-            line-height: 1.1;
-            margin-left: -3px;
-            /* -webkit-text-fill-color: transparent; -webkit-background-clip: text; */
-        }
-
-        .m-text {
-            display: flex;
-            color: white;
-            opacity: .9;
-            font-family: sans-serif;
-            font-size: 25px;
-            letter-spacing: 16px;
-            margin-right: -16px;
-            text-align: center;
-            width: calc(100% + 16px);
-            justify-content: space-between;
-            /* margin: 2px;*/
-        }
-
-        .m-text--2 {
-            color: white;
-            opacity: .9;
-            font-size: 20px;
-            /* font-weight: 200;*/
-            letter-spacing: 3px;
-            /* margin-left: 12.6px;*/
-            text-align: center;
-            width: fit-content;
-            /* margin: 2px;*/
-            width: 100%;
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            margin-top: 15px;
-        }
-
-        .m-text--2>span {
-            font-weight: 200;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        .nav-menu ul {
-            display: flex;
-            color: white;
-            font-family: sans-serif;
-            font-size: 25px;
-            opacity: .9;
-            width: 600px;
-            text-transform: uppercase;
-            list-style-type: none;
-            align-content: space-between;
-            width: 100%;
-            /* margin-left: 2px;*/
-            padding: 0;
-        }
-
-        .nav-menu {
-            letter-spacing: 3px;
-            margin-top: 40px;
-        }
-
-        .nav-menu li:not(:first-child) {
-            margin-left: 108px;
-        }
-
-        .text-border {
-            /* text-align: left;*/
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .photo-block {
-            background-image: url(img/shugaev2.jpeg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            z-index: 100;
-            filter: grayscale(.5);
-        }
-
-        .photo-block__border {
-            display: none;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: solid 5px #de3030;
-            left: 50%;
-            position: absolute;
-            transform: translate(-50%, calc(-4rem - 2.5px - 50%));
-        }
-
-        .text-bg {
-            opacity: 1;
-            border: solid 5px #de3030;
-            position: relative;
-            /* padding: 4rem 2rem 2rem 2rem;*/
-            padding: 2rem;
-        }
-
-        @media screen and (max-width: 900px) {
-            .bg-video {
-                /* min-height: 400px;*/
-            }
-            .logo-text {
-                font-size: 50px;
-                margin-left: -1px;
-            }
-            .m-text {
-                font-size: 15px;
-                letter-spacing: 8.2px;
-                /* margin-left: -8.2px;*/
-                margin-right: -8.2px;
-                /* text-align: center;*/
-                width: calc(100% + 8.2px);
-            }
-            .m-text--2 {
-                font-size: 15px;
-                letter-spacing: 1.5px;
-            }
-        }
-
-        @media screen and (max-width: 550px) {
-            .bg-video {
-                /* min-height: 200px;*/
-            }
-            .logo-text {
-                font-size: 25px;
-                margin-left: -1px;
-            }
-            .m-text {
-                font-size: 9px;
-                letter-spacing: 4.5px;
-                /* margin-left: -8.2px; */
-                margin-right: -4.5px;
-                /* text-align: center; */
-                width: calc(100% + 4.5px);
-            }
-            .m-text--2 {
-                font-size: 12px;
-                letter-spacing: 1.5px;
-            }
-            .photo-block__border {
-                width: 60px;
-                height: 60px;
-                border: solid 3px #de3030;
-                transform: translate(-50%, calc(-2.5rem - 1.5px - 50%));
-            }
-            .text-bg {
-                opacity: 1;
-                border: solid 3px #de3030;
-                position: relative;
-                /* padding: 2.5rem 2rem 1.5rem 2rem;*/
-            }
-            .photo-block {
-                background-image: url(img/shugaev2.jpeg);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                z-index: 100;
-                filter: grayscale(.5);
-            }
-        }
-
-        /* @media screen and (max-width: 500px) { .text-bg { padding: 1rem; width: 200px; } .logo-text { font-size: 25px; } .m-text { font-size: 15px; letter-spacing: 8.2px } .m-text--2 { font-size: 15px; letter-spacing: 1.5px; margin-left: -4px; } } */
-    </style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="scripts.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <!--    <script src="scripts.js"></script>-->
+    <script src="scripts.js"></script>
 </head>
 
 <body>
     <div class="bg-video">
-        <!--
-<video class="bg-video__content" autoplay muted loop>
-            <source src="video/Save_As.mp4" type="video/mp4"><source src="video/Save_As.webm" type="video/webm">
-             You browser is not supported!
+        <video class="bg-video__content" autoplay muted loop>
+                   <source src="video/Save_As.mp4" type="video/mp4">
+                   <source src="video/Save_As.webm" type="video/webm">
+<!--                       You browser is not supported!-->
         </video>
--->
     </div>
+
     <section class="main-block">
         <div class="text-bg">
+
             <div class="photo-block__border">
-                <div class="photo-block">
-                    <video class='bg-video__content' autoplay muted loop> <
-        source src = 'video/Save_As.mp4'
-        type = 'video/mp4' >
-            <
-            source src = 'video/Save_As.webm'
-        type = 'video/webm' >
-            You browser is not supported!
-            </video>
-                </div>
+                <div class="photo-block"></div>
             </div>
-            <div class="text-border"><span class="logo-text">SHUGAEV </span>
-                <div class="m-text"><span>FRONT</span><span>END</span><span>DEVELOPER</span></div>
-                <!-- <hr><hr size="4px" style=" border-style: none;  color: white; background-color: white; width: 100px; margin: 30px auto;">-->
-                <div class="m-text--2"><span>+7 953 335 0007</span><span style="display: none;">|</span><span>alek-2020@yandex.ru</span></div>
-                <!-- <nav class="nav-menu"><ul><li>projects</li><li>blog</li><li>contacts</li></ul></nav>-->
+
+
+            <div class="text-border">
+
+                <span class="logo-text">
+                    SHUGAEV
+                </span>
+                <div class="m-text">
+                    <span>FRONT</span>
+                    <span>END</span>
+                    <span>DEVELOPER</span>
+                </div>
+                <!--
+<hr>
+<hr size="4px" style=" border-style: none;  color: white; background-color: white; width: 100px; margin: 30px auto;">-->
+
+                <div class="m-text--2">
+                    <span>+7 953 335 0007</span> <span style="display: none;">|</span> <span> alek-2020@yandex.ru</span>
+                </div>
+                <!--
+                <nav class="nav-menu">
+                    <ul>
+                        <li>projects</li>
+                        <li>blog</li>
+                        <li>contacts</li>
+                    </ul>
+                </nav>
+-->
+
             </div>
         </div>
     </section>
 </body>
 
-<script>
-    window.addEventListener("load", function(event) {
-        var g = "  ";
-
-        document.querySelector(".bg-video").innerHTML = g;
-        console.log("All resources finished loading!");
-    });
-</script>
-
-
-
-                   
 </html>
