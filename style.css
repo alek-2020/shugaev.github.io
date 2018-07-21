@@ -16,6 +16,8 @@
     opacity: 1;
     overflow: hidden;
     filter: brightness(.5);
+    background-image: url(img/main-bg.jpg);
+    background-size: cover;
 }
 
 
