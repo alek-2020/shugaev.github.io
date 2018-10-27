@@ -4,8 +4,6 @@ function numericSpiral(n) {
 
     // Текущая сторона
     let side = 0;
-    // Глубина спирали
-    let level = 0;
     // глубина спирали по каждой стороне
     let occupancy = [0, 0, 0, 0]
     // С
