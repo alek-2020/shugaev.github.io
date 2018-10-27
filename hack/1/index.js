@@ -1,10 +1,14 @@
-((n = 7) => {
+function numericSpiral(n) {
 
     let result = [];
 
-    side = 0;
+    // Текущая сторона
+    let side = 0;
+    // Глубина спирали
     let level = 0;
+    // глубина спирали по каждой стороне
     let occupancy = [0, 0, 0, 0]
+    // С
     let counter = 1;
 
     for (let i = 0; i < n * 2; i++) {
@@ -12,7 +16,7 @@
             case 1:
                 for (j = occupancy[0]; j < n - occupancy[1]; j++) {
                     // console.log('верх массив', occupancy[2], 'индекс', j, 'число', counter)
-                    if (!result[level]) result[level] = []
+                    if (!result[occupancy[2]]) result[occupancy[2]] = []
                     result[occupancy[2]][j] = counter++
                 }
 
@@ -23,7 +27,7 @@
                 for (j = occupancy[2]; j < n - occupancy[3]; j++) {
                     if (!result[j]) result[j] = []
                     // console.log('право массив', j, 'позиция', n - level - 1, 'число', counter)
-                    result[j][n - level - 1] = counter++;
+                    result[j][n - occupancy[1] - 1] = counter++;
                 }
 
                 occupancy[1]++
@@ -31,10 +35,10 @@
                 break;
 
             case 3:
-                for (j = n - occupancy[3] - 1 ; j > occupancy[2] - 1; j--) {
-                    if (!result[n - level] ) result[n - level] = []
+                for (j = n - occupancy[3] - 1; j > occupancy[2] - 1; j--) {
+                    if (!result[n - 1 - occupancy[3]]) result[n - occupancy[3]] = []
                     // console.log('низ массив', n - level - 1, 'позиция', j, 'число', counter)
-                    result[n - 1 - level][j - 1] = counter++;
+                    result[n - 1 - occupancy[3]][j - 1] = counter++;
                 }
 
                 occupancy[3]++
@@ -54,11 +58,8 @@
         }
 
         side++
-        if (i % 4 === 0 && i != 0) {
-            level++;
-            side = 1
-        }
+        if (i % 4 === 0 && i != 0) side = 1
     }
 
     console.log('res', result);
-})()
+}
