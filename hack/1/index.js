@@ -13,7 +13,7 @@ function numericSpiral(n) {
         switch (side) {
             case 1:
                 for (j = occupancy[0]; j < n - occupancy[1]; j++) {
-                    console.log('верх массив', occupancy[2], 'индекс', j, 'число', counter)
+                    // console.log('верх массив', occupancy[2], 'индекс', j, 'число', counter)
                     if (!result[occupancy[2]]) result[occupancy[2]] = []
                     result[occupancy[2]][j] = counter++
                 }
@@ -24,7 +24,7 @@ function numericSpiral(n) {
             case 2:
                 for (j = occupancy[2]; j < n - occupancy[3]; j++) {
                     if (!result[j]) result[j] = []
-                    console.log('право массив', j, 'позиция', n - occupancy[1] - 1, 'число', counter)
+                    // console.log('право массив', j, 'позиция', n - occupancy[1] - 1, 'число', counter)
                     result[j][n - occupancy[1] - 1] = counter++;
                 }
 
@@ -35,7 +35,7 @@ function numericSpiral(n) {
             case 3:
                 for (j = n - occupancy[3] - 1; j > occupancy[2] - 1; j--) {
                     if (!result[n - 1 - occupancy[3]]) result[n - occupancy[3]] = []
-                    console.log('низ массив', n - 1 - occupancy[3], 'позиция', j, 'число', counter)
+                    // console.log('низ массив', n - 1 - occupancy[3], 'позиция', j, 'число', counter)
                     result[n - 1 - occupancy[3]][j - 1] = counter++;
                 }
 
@@ -46,7 +46,7 @@ function numericSpiral(n) {
 
             case 4:
                 for (j = n - occupancy[3]; j > occupancy[2]; j--) {
-                    console.log('лево', j - 1, 'позиция', occupancy[0], 'номер', counter, 'число', counter)
+                    // console.log('лево', j - 1, 'позиция', occupancy[0], 'номер', counter, 'число', counter)
                     result[j - 1][occupancy[0]] = counter++;
                 }
 
