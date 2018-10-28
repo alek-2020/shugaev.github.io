@@ -11,9 +11,19 @@
 </head>
 
 <body>
+    <form>
+        <input name='inp' type='number' />
+        <button>Разместить</button>
+    </form>
 </body>
 <script>
     queenPlacer(9);
+
+    document.querySelector('form').addEventListener('submit', (ev) => {
+        ev.preventDefault();
+        const value = ev.target.inp.value;
+        queenPlacer(value)
+    })
 </script>
 
 </html>
